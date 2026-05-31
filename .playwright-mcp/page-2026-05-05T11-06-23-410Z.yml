@@ -1,0 +1,119 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e11]:
+          - heading "AppLab" [level=1] [ref=e12]
+          - paragraph [ref=e13]: v0.1.0
+      - generic [ref=e14]:
+        - button "Switch to chat view" [ref=e15]: Chat
+        - button "Switch to builder view" [ref=e16]: Builder
+      - generic:
+        - generic [ref=e17]:
+          - button "Go back" [ref=e18]:
+            - img [ref=e19]
+          - button "Go forward" [ref=e22]:
+            - img [ref=e23]
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - searchbox "Search applications..." [ref=e29]
+      - button "Loading..." [ref=e34]:
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e38]: Loading...
+        - img [ref=e39]
+    - main [ref=e43]:
+      - generic [ref=e44]:
+        - navigation [ref=e48]:
+          - link "Dashboard" [ref=e51] [cursor=pointer]:
+            - /url: /
+            - img [ref=e53]
+            - generic [ref=e56]: Dashboard
+          - link "Projects" [ref=e59] [cursor=pointer]:
+            - /url: /projects
+            - img [ref=e61]
+            - generic [ref=e63]: Projects
+          - link "Studio" [ref=e66] [cursor=pointer]:
+            - /url: /studio
+            - img [ref=e68]
+            - generic [ref=e70]: Studio
+          - generic [ref=e72]:
+            - generic [ref=e73] [cursor=pointer]:
+              - img [ref=e75]
+              - generic [ref=e81]: Design
+            - button "Expand Design" [ref=e82]:
+              - img [ref=e83]
+          - generic [ref=e86]:
+            - generic [ref=e87] [cursor=pointer]:
+              - img [ref=e89]
+              - generic [ref=e91]: Automate
+            - button "Expand Automate" [ref=e92]:
+              - img [ref=e93]
+          - link "Data" [ref=e97] [cursor=pointer]:
+            - /url: /data
+            - img [ref=e99]
+            - generic [ref=e103]: Data
+          - link "Analytics" [ref=e106] [cursor=pointer]:
+            - /url: /analytics
+            - img [ref=e108]
+            - generic [ref=e110]: Analytics
+          - link "Docs" [ref=e113] [cursor=pointer]:
+            - /url: /docs
+            - img [ref=e115]
+            - generic [ref=e118]: Docs
+          - link "Integrations" [ref=e121] [cursor=pointer]:
+            - /url: /integrations
+            - img [ref=e123]
+            - generic [ref=e127]: Integrations
+          - link "Settings" [ref=e130] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e132]
+            - generic [ref=e135]: Settings
+        - separator [ref=e137]
+        - generic [ref=e146]:
+          - heading "Dashboard" [level=1] [ref=e147]
+          - paragraph [ref=e148]: Operational view across your projects, apps, and local runtime.
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - generic [ref=e166]: Connected
+        - button "Apps" [ref=e168] [cursor=pointer]:
+          - img [ref=e169]
+          - generic [ref=e174]: Apps
+      - generic [ref=e177]:
+        - button "CLI" [ref=e178]:
+          - img [ref=e179]
+          - generic [ref=e181]: CLI
+        - button "0" [ref=e183] [cursor=pointer]:
+          - img [ref=e184]
+          - generic [ref=e189]: "0"
+      - generic [ref=e190]:
+        - button "APIs 0" [ref=e191] [cursor=pointer]:
+          - img [ref=e192]
+          - generic [ref=e195]: APIs
+          - generic [ref=e196]: "0"
+        - button "Needs Attention 1" [ref=e197] [cursor=pointer]:
+          - img [ref=e198]
+          - generic [ref=e200]: Needs Attention
+          - generic [ref=e201]: "1"
+        - button "Database" [ref=e202] [cursor=pointer]:
+          - img [ref=e203]
+          - generic [ref=e207]: Database
+        - button "Analytics" [ref=e208] [cursor=pointer]:
+          - img [ref=e209]
+          - generic [ref=e211]: Analytics
+        - button "WS" [ref=e212] [cursor=pointer]:
+          - img [ref=e213]
+          - generic [ref=e217]: WS
+        - button "MCP" [ref=e218] [cursor=pointer]:
+          - img [ref=e219]
+          - generic [ref=e221]: MCP
+        - button "RAG" [ref=e222] [cursor=pointer]:
+          - img [ref=e223]
+          - generic [ref=e231]: RAG
+        - button "0" [ref=e232] [cursor=pointer]:
+          - img [ref=e233]
+          - generic [ref=e236]: "0"
+  - region "Notifications alt+T"

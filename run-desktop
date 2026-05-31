@@ -1,0 +1,39 @@
+#!/bin/bash
+set -euo pipefail
+cd "$(dirname "$0")"
+
+DESKTOP_DIR="crates/vibn-desktop"
+UI_DIR="$DESKTOP_DIR/ui"
+
+say() { printf '[run-desktop] %s\n' "$*"; }
+die() { printf '[run-desktop] error: %s\n' "$*" >&2; exit 1; }
+
+command -v cargo >/dev/null 2>&1 || die "cargo not found. Install Rust from https://rustup.rs"
+command -v npm >/dev/null 2>&1   || die "npm not found. Install Node.js from https://nodejs.org (any LTS)."
+
+# Install the cargo tauri subcommand into a project-local CARGO_HOME so the
+# user doesn't need to touch their global tooling.
+LOCAL_CARGO_HOME="$PWD/.cargo-tools"
+export PATH="$LOCAL_CARGO_HOME/bin:$PATH"
+
+if ! cargo tauri --version >/dev/null 2>&1; then
+  say "Installing tauri-cli into $LOCAL_CARGO_HOME (one-time, a few minutes)..."
+  CARGO_HOME="$LOCAL_CARGO_HOME" cargo install tauri-cli --locked --version "^2" >&2
+fi
+
+if [ ! -d "$UI_DIR/node_modules" ]; then
+  say "Installing frontend dependencies (one-time)..."
+  (cd "$UI_DIR" && npm install --silent)
+fi
+
+MODE="${1:-dev}"
+case "$MODE" in
+  build|release)
+    say "Building release bundle..."
+    cd "$DESKTOP_DIR" && exec cargo tauri build
+    ;;
+  dev|*)
+    say "Launching Vibn desktop (dev, no-watch: frontend HMR only)..."
+    cd "$DESKTOP_DIR" && exec cargo tauri dev --no-watch
+    ;;
+esac

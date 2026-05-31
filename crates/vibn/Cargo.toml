@@ -1,0 +1,15 @@
+[package]
+name = "vibn"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4", features = ["derive"] }
+comfy-table = "7"
+crossterm = "0.28"
+ratatui = "0.29"
+regex = "1"
+serde_json = "1"
+tui-textarea = "0.7"
+vibn-core = { path = "../vibn-core" }

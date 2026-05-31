@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/vibn-core",
+    "crates/vibn",
+    "crates/vibn-desktop",
+]
+resolver = "2"

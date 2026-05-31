@@ -1,0 +1,26 @@
+{
+  "name": "vibn",
+  "description": "Vibn — local AI coding agent. CLI (Rust), desktop (Tauri), marketing site (Next.js).",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.14",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "cd apps/marketing && bun run dev",
+    "dev:marketing": "cd apps/marketing && bun run dev",
+    "dev:api": "cd apps/api && bun run dev",
+    "build": "turbo run build",
+    "build:marketing": "cd apps/marketing && bun run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "vercel-build": "cd apps/marketing && bun run build",
+    "cli:run": "./run-cli",
+    "desktop:run": "./run-desktop"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.14"
+  }
+}

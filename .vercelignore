@@ -1,0 +1,15 @@
+/target/
+/crates/
+/data/
+/training/
+/legacy/
+/.cargo-tools/
+/Cargo.lock
+/Cargo.toml
+/run-cli
+/run-desktop
+/vibn
+/.git/
+/.github/
+/.playwright-mcp/
+/apps/api/

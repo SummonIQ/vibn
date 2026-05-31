@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2026-05-26",
+    "entries": [
+      {
+        "title": "Desktop control",
+        "description": "Opt-in tools that let Vibn see and act on the rest of your machine — list open windows, focus an app, capture a screenshot, read selected text, send keystrokes, run an AppleScript. Every capability stays disabled until you flip the Desktop toggle in Settings, and every action runs through your local permission rules. macOS first.",
+        "size": "major"
+      },
+      {
+        "title": "File explorer and code editor in the desktop app",
+        "description": "Open any file in your project, follow along while Vibn works, and edit by hand when you want to. Read-only by default with an explicit Edit mode so the agent's diff awareness stays honest. ⌘S to save. The agent can pop a file open for you mid-conversation with the new open_in_editor tool.",
+        "size": "major"
+      },
+      {
+        "title": "Project mode",
+        "description": "Pick a folder once and Vibn stays focused on it across sessions — picker lives in the chat header, recents are remembered, and the CLI prompts you the first time you launch inside a code directory. Per-project memory (observations, transcripts, conventions) is automatic.",
+        "size": "major"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-25",
+    "entries": [
+      {
+        "title": "vibn.dev is live",
+        "description": "New marketing home for Vibn at vibn.dev. Dark, fast, no signup wall — and a deeper page for the CLI at vibn.dev/cli.",
+        "size": "major"
+      },
+      {
+        "title": "New brand identity",
+        "description": "Final mark and gradient — purple → magenta → orange, with a refined rounded V triangle. Used everywhere across the desktop app, CLI, and site.",
+        "size": "minor"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-15",
+    "entries": [
+      {
+        "title": "Vibn — agent, CLI, and desktop, in one preview",
+        "description": "The first cut of Vibn ships three surfaces that share one engine: a Rust agent core, a fullscreen TUI for the terminal, and a native desktop app on macOS. Same conversations, same tools, your choice of interface.",
+        "size": "major"
+      },
+      {
+        "title": "Bring your own model",
+        "description": "Any model Ollama can run, from tiny 3B coders to 70B reasoners, works out of the box. Switch mid-conversation from the model picker in the composer. Smart parsing keeps tool calls working even on smaller models that emit them as text.",
+        "size": "major"
+      },
+      {
+        "title": "MCP support",
+        "description": "Plug in Linear, Stripe, GitHub, Sentry, Vercel, or any Model Context Protocol server. Servers are managed from the desktop app or the CLI's marketplace browser, and the agent gets their tools automatically alongside the built-in ones.",
+        "size": "major"
+      }
+    ]
+  }
+]

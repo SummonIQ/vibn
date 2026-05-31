@@ -1,0 +1,129 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e11]:
+          - heading "AppLab" [level=1] [ref=e12]
+          - paragraph [ref=e13]: v0.1.0
+      - generic [ref=e14]:
+        - button "Switch to chat view" [ref=e15]: Chat
+        - button "Switch to builder view" [ref=e16]: Builder
+      - generic:
+        - generic [ref=e17]:
+          - button "Go back" [ref=e18]:
+            - img [ref=e19]
+          - button "Go forward" [ref=e22]:
+            - img [ref=e23]
+        - generic [ref=e25]:
+          - img [ref=e26]
+          - searchbox "Search applications..." [ref=e29]
+      - button "Projects" [ref=e34]:
+        - generic [ref=e35]:
+          - img [ref=e36]
+          - generic [ref=e38]: Projects
+        - img [ref=e39]
+    - main [ref=e43]:
+      - generic [ref=e44]:
+        - navigation [ref=e48]:
+          - link "Dashboard" [ref=e51] [cursor=pointer]:
+            - /url: /
+            - img [ref=e53]
+            - generic [ref=e56]: Dashboard
+          - link "Projects" [ref=e59] [cursor=pointer]:
+            - /url: /projects
+            - img [ref=e61]
+            - generic [ref=e63]: Projects
+          - link "Studio" [ref=e66] [cursor=pointer]:
+            - /url: /studio
+            - img [ref=e68]
+            - generic [ref=e70]: Studio
+          - generic [ref=e72]:
+            - generic [ref=e73] [cursor=pointer]:
+              - img [ref=e75]
+              - generic [ref=e81]: Design
+            - button "Expand Design" [ref=e82]:
+              - img [ref=e83]
+          - generic [ref=e86]:
+            - generic [ref=e87] [cursor=pointer]:
+              - img [ref=e89]
+              - generic [ref=e91]: Automate
+            - button "Expand Automate" [ref=e92]:
+              - img [ref=e93]
+          - link "Data" [ref=e97] [cursor=pointer]:
+            - /url: /data
+            - img [ref=e99]
+            - generic [ref=e103]: Data
+          - link "Analytics" [ref=e106] [cursor=pointer]:
+            - /url: /analytics
+            - img [ref=e108]
+            - generic [ref=e110]: Analytics
+          - link "Docs" [ref=e113] [cursor=pointer]:
+            - /url: /docs
+            - img [ref=e115]
+            - generic [ref=e118]: Docs
+          - link "Integrations" [ref=e121] [cursor=pointer]:
+            - /url: /integrations
+            - img [ref=e123]
+            - generic [ref=e127]: Integrations
+          - link "Settings" [ref=e130] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e132]
+            - generic [ref=e135]: Settings
+        - separator [ref=e137]
+        - generic [ref=e142]:
+          - generic [ref=e146]:
+            - heading "Dashboard" [level=1] [ref=e147]
+            - paragraph [ref=e148]: Operational view across your projects, apps, and local runtime.
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: Dashboard
+            - heading "No desktop projects found" [level=2] [ref=e154]
+            - paragraph [ref=e155]: AppLab looks in ~/Projects for projects. Add or move projects there to populate the dashboard.
+            - generic [ref=e156]:
+              - link "Open Projects" [ref=e157] [cursor=pointer]:
+                - /url: /projects
+              - link "Browse Docs" [ref=e158] [cursor=pointer]:
+                - /url: /docs
+    - generic [ref=e160]:
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - img [ref=e163]
+          - generic [ref=e165]: Connected
+        - button "Apps" [ref=e167] [cursor=pointer]:
+          - img [ref=e168]
+          - generic [ref=e173]: Apps
+      - generic [ref=e176]:
+        - button "CLI" [ref=e177]:
+          - img [ref=e178]
+          - generic [ref=e180]: CLI
+        - button "0" [ref=e182] [cursor=pointer]:
+          - img [ref=e183]
+          - generic [ref=e188]: "0"
+      - generic [ref=e189]:
+        - button "APIs 0" [ref=e190] [cursor=pointer]:
+          - img [ref=e191]
+          - generic [ref=e194]: APIs
+          - generic [ref=e195]: "0"
+        - button "Needs Attention 1" [ref=e196] [cursor=pointer]:
+          - img [ref=e197]
+          - generic [ref=e199]: Needs Attention
+          - generic [ref=e200]: "1"
+        - button "Database" [ref=e201] [cursor=pointer]:
+          - img [ref=e202]
+          - generic [ref=e206]: Database
+        - button "Analytics" [ref=e207] [cursor=pointer]:
+          - img [ref=e208]
+          - generic [ref=e210]: Analytics
+        - button "WS" [ref=e211] [cursor=pointer]:
+          - img [ref=e212]
+          - generic [ref=e216]: WS
+        - button "MCP" [ref=e217] [cursor=pointer]:
+          - img [ref=e218]
+          - generic [ref=e220]: MCP
+        - button "RAG" [ref=e221] [cursor=pointer]:
+          - img [ref=e222]
+          - generic [ref=e230]: RAG
+        - button "0" [ref=e231] [cursor=pointer]:
+          - img [ref=e232]
+          - generic [ref=e235]: "0"
+  - region "Notifications alt+T"

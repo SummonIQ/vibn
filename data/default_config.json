@@ -1,0 +1,21 @@
+{
+  "default_model": "qwen2.5-coder:7b",
+  "ollama_models_path": "",
+  "max_tool_rounds": 30,
+  "command_timeout": 120,
+  "confirm_destructive": true,
+  "vision_model": "qwen2.5vl:7b",
+  "image_gen_model": "comfyui:sdxl-base",
+  "video_gen_model": "comfyui:ltx-video",
+  "comfyui_url": "http://127.0.0.1:8188",
+  "comfyui_workflow_dir": "",
+  "video_frame_count": 6,
+  "mcp_servers": {},
+  "command_usage": {},
+  "permissions": {
+    "always_allow": [],
+    "always_deny": [],
+    "confirm": []
+  },
+  "hooks": {}
+}

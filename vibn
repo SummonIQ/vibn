@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+build_rust() {
+  local log_file
+  log_file="$(mktemp)"
+  if cargo build -q -p vibn >/dev/null 2>"$log_file"; then
+    rm -f "$log_file"
+    return 0
+  fi
+  cat "$log_file" >&2
+  rm -f "$log_file"
+  return 1
+}
+
+build_rust
+exec target/debug/vibn "$@"

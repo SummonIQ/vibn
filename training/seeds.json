@@ -1,0 +1,71 @@
+{
+  "stack": {
+    "framework": "Next.js 15 App Router",
+    "language": "TypeScript",
+    "runtime": "Bun",
+    "orm": "Prisma",
+    "ui_library": "shadcn/ui",
+    "styling": "Tailwind CSS v4",
+    "auth": "better-auth",
+    "package_manager": "bun"
+  },
+
+  "rules": [
+    "Use Tailwind utility classes exclusively. Never use style={{}}, inline styles, or CSS files (except globals.css for @layer base only).",
+    "Use only Tailwind design-system values (spacing, colors, font sizes from the config). Avoid arbitrary values like [24px] or [#abc123] — if you must, limit to one per component.",
+    "Use shadcn/ui primitives for all UI: Button, Card, CardHeader, CardContent, CardFooter, Input, Label, Badge, Avatar, Dialog, Sheet, Tabs, Select, DropdownMenu, Popover, Separator, Skeleton, Toast, Table, Form. Never use raw <button>, <input>, or <div> when a shadcn primitive exists.",
+    "All authentication must go through better-auth. Never implement JWT, sessions, or password logic manually.",
+    "All database access must go through the Prisma client. Never use raw SQL strings. Never import 'pg' or 'mysql' directly.",
+    "File structure: app/ for pages and API routes, components/ for shared components, components/ui/ for shadcn, lib/ for utilities (db.ts, auth.ts, utils.ts), prisma/ for schema.",
+    "Every component file must use TypeScript with proper type annotations. No 'any'. Use interface for props.",
+    "Server components by default. Only add 'use client' when you need useState, useEffect, event handlers, or browser APIs.",
+    "Use cn() from lib/utils for conditional class merging. Never string concatenate Tailwind classes.",
+    "Forms use react-hook-form with zod validation via shadcn Form components. Never uncontrolled inputs for forms."
+  ],
+
+  "system_prompt": "You are a senior full-stack engineer who writes production-quality Next.js 15 App Router code. Stack: TypeScript, Bun, Prisma, shadcn/ui, Tailwind CSS v4, better-auth. You follow strict conventions: Tailwind only (no inline styles), shadcn primitives (no raw HTML), Prisma for data (no raw SQL), better-auth for auth. You write complete, working files — not snippets. You include all imports.",
+
+  "components": [
+    {"name": "UserProfileCard", "description": "displays user avatar, name, email, role badge, and edit/logout actions"},
+    {"name": "DataTable", "description": "sortable paginated table with column filters and row selection"},
+    {"name": "AuthSignInForm", "description": "email/password sign-in form with validation, error states, and loading spinner"},
+    {"name": "AuthSignUpForm", "description": "registration form with name, email, password, confirm password, zod validation"},
+    {"name": "DashboardStats", "description": "4-stat grid showing counts with trend indicators and icons"},
+    {"name": "NotificationDropdown", "description": "bell icon dropdown with unread badge, notification list, mark-all-read action"},
+    {"name": "SettingsForm", "description": "user settings page with display name, email, avatar upload, save button"},
+    {"name": "DeleteConfirmDialog", "description": "confirmation dialog for destructive actions with item name display"},
+    {"name": "EmptyState", "description": "empty list/table state with icon, title, description, and CTA button"},
+    {"name": "LoadingSkeleton", "description": "skeleton loading state matching a card layout with avatar and text lines"},
+    {"name": "SearchBar", "description": "debounced search input with clear button and result count display"},
+    {"name": "ThemeToggle", "description": "dark/light/system mode toggle using next-themes and shadcn DropdownMenu"},
+    {"name": "FileUpload", "description": "drag-and-drop file upload zone with preview, progress bar, and remove button"},
+    {"name": "CommandPalette", "description": "cmd+k command palette using shadcn Command with navigation actions"},
+    {"name": "PricingCard", "description": "pricing tier card with feature list, highlighted tier, and CTA button"}
+  ],
+
+  "api_routes": [
+    {"path": "app/api/users/route.ts", "description": "GET list users with pagination, POST create user, auth-protected"},
+    {"path": "app/api/users/[id]/route.ts", "description": "GET single user, PATCH update, DELETE with ownership check"},
+    {"path": "app/api/upload/route.ts", "description": "POST file upload handler, validates type/size, returns URL"},
+    {"path": "app/api/search/route.ts", "description": "GET full-text search across users and content with Prisma"}
+  ],
+
+  "refactor_tasks": [
+    "Convert this React component from CSS modules to Tailwind classes",
+    "Replace the raw <button> elements with shadcn Button components",
+    "Extract this repeated card pattern into a reusable shadcn Card component",
+    "Add proper TypeScript interfaces to this component's props",
+    "Replace the manual JWT auth check with better-auth session validation",
+    "Convert this fetch() call to use Prisma client instead of raw SQL",
+    "Add zod validation and react-hook-form to this uncontrolled form",
+    "Replace the custom modal with a shadcn Dialog component"
+  ],
+
+  "prompt_templates": [
+    "Create a {component} component that {description}. Write the complete file at components/{component}.tsx.",
+    "Build {path} that handles: {description}. Include proper TypeScript types and error handling.",
+    "Refactor this component to follow our conventions: {refactor_task}. Show the complete updated file.",
+    "Create a Prisma schema model for {entity} with proper relations and then a React component that displays it.",
+    "Build a complete {component} with loading, error, and empty states. Use shadcn Skeleton for loading."
+  ]
+}
